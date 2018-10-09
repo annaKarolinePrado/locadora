@@ -1,0 +1,8 @@
+criando model
+php artisan make:model Cliente
+
+iniciar um servidor
+php artisan serve
+
+criar um controler
+php artisan make:Controller ClienteController
