@@ -4,10 +4,10 @@
 <div class = "cliente" >
     <form action= {{ url('cliente/salvar')}} method="post">
         {{csrf_field()}}
-        <div class = "subMenu">
-            <button type="submit" class="btn btn-primary btn-subMenu btn-md">Salvar</button>
-            <button type="button" class="btn btn-primary btn-subMenu btn-md">Pesquisar</button>
-            <button type="button" class="btn btn-primary btn-subMenu btn-md">Voltar</button>
+        <div class = "subMenu">            
+            <button type="button" id="pesquisar" class="btn btn-primary btn-subMenu btn-md">Pesquisar</button>
+            <button type="button" id="novo" class="btn btn-primary btn-subMenu btn-md">Novo</button>
+            <button type="submit" id="salvar"class="btn btn-primary btn-subMenu btn-md">Salvar</button>
         </div>
         <div class="cadastro">
             <table class="table">
@@ -15,7 +15,7 @@
                     <tr>
                         <td class="tamanhoTD">
                             <label class="label-form ordenacao">Código:</label>
-                            <span class="spam-form ordenacao"><input type="text" readonly="" class="form-control" id="id_cliente" name="id_cliente"></span>
+                            <span class="spam-form ordenacao"><input type="text" disabled="true" class="form-control" id="id_cliente" name="id_cliente"></span>
                         </td>
                         <td  class="tamanhoTD">
                             <label class="label-form">Nome:</label>

@@ -8,5 +8,6 @@ Route::get('/', function () {
 Route::group(["prefix" => "cliente"], function () {
     Route::get("/", "ClienteController@index");
     Route::post("/salvar", "ClienteController@salvar");
+    Route::post("/pesquisar", "ClienteController@pesquisar");
 });
 
