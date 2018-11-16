@@ -13,7 +13,7 @@
                 <th width='3%' align='center'>#</th>
               </tr>
             </thead>
-            <tbody class='bDinamica'>
+            <tbody class='bDinamica' id="dinamica">
               <tr>
               </tr>
                 
@@ -75,8 +75,29 @@
                     'telefone': telefone,
                     'endereco': endereco
                 },
-                success:function(data){  
-                    alert("Deu certo");
+                success:function(data){   
+                    
+                    for (var i = 0; i < data.length; i++) {
+                        
+                        console.log(data[i].nome);
+                        var linha = $('<tr>');
+                        var colunaCodigo = $('<td>').html(data[i].id_cliente);
+                        var colunaNome = $('<td>').html(data[i].nome);
+                        var colunaCpf = $('<td>').html(data[i].cpf);
+                        var colunaData = $('<td>').html(data[i].data_nasc);
+                        var colunaEmail = $('<td>').html(data[i].email);
+                        var colunaTelefone = $('<td>').html(data[i].telefone);
+                        var colunaEndereco = $('<td>').html(data[i].endereco);
+                        linha.append(colunaCodigo);
+                        linha.append(colunaNome);
+                        linha.append(colunaCpf);
+                        linha.append(colunaData);
+                        linha.append(colunaEmail);
+                        linha.append(colunaTelefone);
+                        linha.append(colunaEndereco);
+                        $('#dinamica').append(linha);
+                    }
+    
                 },
                 error:function(){                    
                         alert("Ocorreu algum problema entre em contato como suporte");                    

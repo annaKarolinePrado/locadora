@@ -10,4 +10,7 @@ Route::group(["prefix" => "cliente"], function () {
     Route::post("/salvar", "ClienteController@salvar");
     Route::post("/pesquisar", "ClienteController@pesquisar");
 });
+Route::group(["prefix" => "categoria"], function () {
+    Route::get("/", "CategoriaController@index");
+});
 
