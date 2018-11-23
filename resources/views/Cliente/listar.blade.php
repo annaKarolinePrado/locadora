@@ -14,14 +14,7 @@
               </tr>
             </thead>
             <tbody class='bDinamica' id="dinamica">
-              <tr>
-              </tr>
-                
-              <tr>                
-              </tr>
               
-              <tr>                
-              </tr>
             </tbody>
           </table>
 </div>
@@ -29,8 +22,7 @@
     //validações
     window.onload = function(){
         desabilitaBtnSalvar();
-        habilitaBtnSalvar();
-        
+        habilitaBtnSalvar();        
     }
     function desabilitaBtnSalvar(){
         $("#pesquisar").click(function(){
@@ -38,6 +30,7 @@
             $("#id_cliente").prop("disabled", false);
             pesquisar();
         });
+        
     }
     function habilitaBtnSalvar(){
         $("#novo").click(function(){
@@ -79,7 +72,6 @@
                     
                     for (var i = 0; i < data.length; i++) {
                         
-                        console.log(data[i].nome);
                         var linha = $('<tr>');
                         var colunaCodigo = $('<td>').html(data[i].id_cliente);
                         var colunaNome = $('<td>').html(data[i].nome);
@@ -101,7 +93,7 @@
                 },
                 error:function(){                    
                         alert("Ocorreu algum problema entre em contato como suporte");                    
-                },
+                }
             });
     }   
  </script>   

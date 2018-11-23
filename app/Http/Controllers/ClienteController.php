@@ -26,7 +26,7 @@ class ClienteController extends Controller
         }
         //filtra por cpf
         if ($request->cpf != ""){
-            $filtro = $filtro." AND cpf = ".$request->cpf;
+            $filtro = $filtro." AND cpf = '".$request->cpf."'";
         }
         //filtra por data de nascimento
         if ($request->data_nasc != ""){

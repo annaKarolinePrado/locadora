@@ -35,9 +35,6 @@
         </form>
       </div>
     </nav>
-
-
-
         <div class="conteudo">
             @yield('content')
         </div>
