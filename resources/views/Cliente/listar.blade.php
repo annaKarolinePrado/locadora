@@ -69,10 +69,13 @@
                     'endereco': endereco
                 },
                 success:function(data){   
-                    
+                    $(".remove").each(function(){
+                        $(this).remove();
+                    });
                     for (var i = 0; i < data.length; i++) {
                         
                         var linha = $('<tr>');
+                        linha.prop("class", "remove");
                         var colunaCodigo = $('<td>').html(data[i].id_cliente);
                         var colunaNome = $('<td>').html(data[i].nome);
                         var colunaCpf = $('<td>').html(data[i].cpf);
