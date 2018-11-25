@@ -75,21 +75,39 @@
                     for (var i = 0; i < data.length; i++) {
                         
                         var linha = $('<tr>');
-                        linha.prop("class", "remove");
-                        var colunaCodigo = $('<td>').html(data[i].id_cliente);
-                        var colunaNome = $('<td>').html(data[i].nome);
-                        var colunaCpf = $('<td>').html(data[i].cpf);
-                        var colunaData = $('<td>').html(data[i].data_nasc);
-                        var colunaEmail = $('<td>').html(data[i].email);
-                        var colunaTelefone = $('<td>').html(data[i].telefone);
-                        var colunaEndereco = $('<td>').html(data[i].endereco);
+                        var ancora = $("<a>");                        
+                        linha.prop("class", "remove editar");
+                        
+                        var stringCodigo = "<a href="+ data[i].id_cliente + "/edit>"+ data[i].id_cliente+" </a>";
+                        var colunaCodigo = $('<td>').html(stringCodigo);
+                        
+                        var stringNome = "<a href=" + data[i].id_cliente + "/edit>" + data[i].nome + " </a>";
+                        var colunaNome = $('<td>').html(stringNome);
+                        
+                        var stringCpf = "<a href=" + data[i].id_cliente + "/edit>" + data[i].cpf + " </a>";
+                        var colunaCpf = $('<td>').html(stringCpf);
+                        
+                        var stringData = "<a href=" + data[i].id_cliente + "/edit>" + data[i].data_nasc + " </a>";
+                        var colunaData = $('<td>').html(stringData);
+                        
+                        var stringEmail = "<a href=" + data[i].id_cliente + "/edit>" + data[i].email + " </a>";
+                        var colunaEmail = $('<td>').html(stringEmail);
+                        
+                        var stringTelefone = "<a href=" + data[i].id_cliente + "/edit>" + data[i].telefone + " </a>";
+                        var colunaTelefone = $('<td>').html(stringTelefone);
+                        
+                        var stringEndereco = "<a href=" + data[i].id_cliente + "/edit>" + data[i].endereco + " </a>";
+                        var colunaEndereco = $('<td>').html(stringEndereco);
+                                                
                         linha.append(colunaCodigo);
+                        
                         linha.append(colunaNome);
                         linha.append(colunaCpf);
                         linha.append(colunaData);
                         linha.append(colunaEmail);
                         linha.append(colunaTelefone);
                         linha.append(colunaEndereco);
+                        
                         $('#dinamica').append(linha);
                     }
     
