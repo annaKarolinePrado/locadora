@@ -78,25 +78,25 @@
                         var ancora = $("<a>");                        
                         linha.prop("class", "remove editar");
                         
-                        var stringCodigo = "<a href="+ data[i].id_cliente + "/edit>"+ data[i].id_cliente+" </a>";
+                        var stringCodigo = "<a href="+ data[i].id + "/edit>"+ data[i].id+" </a>";
                         var colunaCodigo = $('<td>').html(stringCodigo);
                         
-                        var stringNome = "<a href=" + data[i].id_cliente + "/edit>" + data[i].nome + " </a>";
+                        var stringNome = "<a href=" + data[i].id + "/edit>" + data[i].nome + " </a>";
                         var colunaNome = $('<td>').html(stringNome);
                         
-                        var stringCpf = "<a href=" + data[i].id_cliente + "/edit>" + data[i].cpf + " </a>";
+                        var stringCpf = "<a href=" + data[i].id + "/edit>" + data[i].cpf + " </a>";
                         var colunaCpf = $('<td>').html(stringCpf);
                         
-                        var stringData = "<a href=" + data[i].id_cliente + "/edit>" + data[i].data_nasc + " </a>";
+                        var stringData = "<a href=" + data[i].id + "/edit>" + data[i].data_nasc + " </a>";
                         var colunaData = $('<td>').html(stringData);
                         
-                        var stringEmail = "<a href=" + data[i].id_cliente + "/edit>" + data[i].email + " </a>";
+                        var stringEmail = "<a href=" + data[i].id + "/edit>" + data[i].email + " </a>";
                         var colunaEmail = $('<td>').html(stringEmail);
                         
-                        var stringTelefone = "<a href=" + data[i].id_cliente + "/edit>" + data[i].telefone + " </a>";
+                        var stringTelefone = "<a href=" + data[i].id + "/edit>" + data[i].telefone + " </a>";
                         var colunaTelefone = $('<td>').html(stringTelefone);
                         
-                        var stringEndereco = "<a href=" + data[i].id_cliente + "/edit>" + data[i].endereco + " </a>";
+                        var stringEndereco = "<a href=" + data[i].id + "/edit>" + data[i].endereco + " </a>";
                         var colunaEndereco = $('<td>').html(stringEndereco);
                                                 
                         linha.append(colunaCodigo);

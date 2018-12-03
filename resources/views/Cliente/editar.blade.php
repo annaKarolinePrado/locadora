@@ -15,36 +15,36 @@
                     <tr>
                         <td class="tamanhoTD">
                             <label class="label-form ordenacao">Código:</label>
-                            <span class="spam-form ordenacao"><input type="text" disabled="true" class="form-control" id="id_cliente" name="id_cliente"></span>
+                            <span class="spam-form ordenacao"><input type="text" value= "<?php echo $cliente->id; ?>" disabled="true" class="form-control" id="id_cliente" name="id_cliente"></span>
                         </td>
                         <td  class="tamanhoTD">
                             <label class="label-form">Nome:</label>
-                            <input type="text" class="form-control" id="nome" name="nome">
+                            <input type="text" class="form-control" value= " <?php echo $cliente->nome; ?>" id="nome" name="nome">
                         </td>
                         <td  class="tamanhoTD">
                             <label class="label-form">CPF:</label>
-                            <span class="spam-form"><input type="text" class="form-control" id="cpf" name="cpf"></span>
+                            <span class="spam-form"><input type="text" class="form-control" value= "<?php echo $cliente->cpf; ?>" id="cpf" name="cpf"></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="tamanhoTD">
                             <label class="label-form ordenacao">Data de nascimento:</label>
-                            <span class="spam-form ordenacao"><input type="date" class="form-control" id="data_nasc" name="data_nasc"></span>
+                            <span class="spam-form ordenacao"><input type="date" class="form-control" value= "<?php echo $cliente->data_nasc; ?>" id="data_nasc" name="data_nasc"></span>
                         </td>
                         <td class="tamanhoTD">
                             <label class="label-form">E-mail:</label>
-                            <input type="text" class="form-control" id="email" name="email">
+                            <input type="text" class="form-control" value="<?php echo $cliente->email; ?>" id="email" name="email">
                         </td> 
                         <td class="tamanhoTD">
                             <label class="label-form">Telefone:</label>
-                            <span class="spam-form"><input type="text" class="form-control" id="telefone" name="telefone"></span>
+                            <span class="spam-form"><input type="text" class="form-control" value="<?php echo $cliente->telefone; ?>" id="telefone" name="telefone"></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="tamanhoTD"> &nbsp; </td>                        
                         <td class="tamanhoTD">
                             <label class="label-form">Endereço:</label>
-                            <input type="text" class="form-control" id="endereco" name="endereco">
+                            <input type="text" class="form-control" value="<?php echo $cliente->endereco; ?>" id="endereco" name="endereco">
                         </td> 
                         <td class="tamanhoTD"> &nbsp; </td>
                     </tr>                  

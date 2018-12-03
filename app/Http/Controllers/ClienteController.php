@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
+    private $cliente;
+    
+    public function __construct()  {
+        $this->cliente = new Cliente();
+    }
+    
     public function index(){
         return view("cliente.index");
     }
@@ -14,11 +20,23 @@ class ClienteController extends Controller
         Cliente::create($request->all());
         return redirect("/cliente");
     }
-     public function pesquisar(Request $request){       
+    public function editar($id){
+        $cliente = $this->getCliente($id);
+        
+        return view('Cliente.editar', [
+            'cliente'   => $cliente
+        ]);       
+    }
+    
+    protected function getCliente($id)  {
+        return $this->cliente->find($id);
+    }
+
+    public function pesquisar(Request $request){       
         $filtro = "";
         //filtra por codigo
         if ($request->id_cliente != ""){
-            $filtro = $filtro." AND id_cliente = ".$request->id_cliente;
+            $filtro = $filtro." AND id = ".$request->id_cliente;
         }
         //filtra por nome
         if ($request->nome != ""){
@@ -48,7 +66,7 @@ class ClienteController extends Controller
         if ($request->endereco != ""){
             $filtro = $filtro." AND endereco LIKE '%".$request->endereco."%'";
         } 
-        $sql = "SELECT * FROM CLIENTE WHERE id_cliente > 0".$filtro;
+        $sql = "SELECT * FROM CLIENTE WHERE id > 0".$filtro;
         $resultSet = DB::select($sql);
         return $resultSet;
      }
